@@ -1,0 +1,57 @@
+
+:root {
+    --primary-color: #3b82f6;
+    --bg-gradient-start: #1e293b;
+    --bg-gradient-end: #0f172a;
+}
+body {
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    overflow: hidden;
+}
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    padding: 3rem;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+.particle {
+    position: absolute;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.input-glass {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.125);
+    color: white;
+}
+.input-glass::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+.stagger-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: reveal 0.7s forwards;
+}
+@keyframes reveal {
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="/assets/image/logo.jpg" type="image/jpg"> 
+    <link rel="stylesheet" href="contact.css">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="glass-container relative">
+        <div id="particle-container" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
+        
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-extrabold text-white mb-4 stagger-reveal" style="animation-delay: 0.2s;">
+                Contact Us
+            </h1>
+            <p class="text-gray-300 stagger-reveal" style="animation-delay: 0.4s;">
+                We are always ready to listen and assist you
+            </p>
+        </div>
+        
+        <form action="https://formspree.io/f/mnnqywwk" method="POST" id="contact-form" class="space-y-4">
+            <div class="stagger-reveal" style="animation-delay: 0.6s;">
+                <input 
+                    type="text" 
+                    id="name"
+                    name="name"  
+                    placeholder="Full Name" 
+                    class="input-glass w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                >
+            </div>
+            
+            <div class="stagger-reveal" style="animation-delay: 0.8s;">
+                <input 
+                    type="email" 
+                    id="email"
+                    name="email" 
+                    placeholder="Email Address" 
+                    class="input-glass w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                >
+            </div>
+            
+            <div class="stagger-reveal" style="animation-delay: 1s;">
+                <textarea 
+                    id="message"
+                    name="message" 
+                    placeholder="Message" 
+                    rows="4" 
+                    class="input-glass w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="stagger-reveal" style="animation-delay: 1.4s;">
+                <div class="g-recaptcha" data-sitekey=""></div> 
+            </div>
+
+            <div class="stagger-reveal" style="animation-delay: 1.6s;">
+                <button 
+                    type="submit" 
+                    class="w-full bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl"
+                >
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </div>
+ <script src="contact.js"></script>
+</body>
+</html>
